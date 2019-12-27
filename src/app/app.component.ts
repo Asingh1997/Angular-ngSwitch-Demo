@@ -1,10 +1,22 @@
 import { Component } from '@angular/core';
 
-@Component({
+
+ @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: ` 
+    <ul [ngSwitch]="person">
+  <li *ngSwitchCase="'Mohan'">Hello Mohan</li>
+  <li *ngSwitchCase="'Sohan'">Hello Sohan</li>
+  <li *ngSwitchCase="'Vijay'">Hello Vijay</li>
+  <li *ngSwitchDefault>Bye Bye</li>
+</ul> 
+ 	
+
+  `,
+  
 })
-export class AppComponent {
-  title = 'switch-case';
+export class AppComponent  {
+person = 'Sohan';
+  
+
 }
